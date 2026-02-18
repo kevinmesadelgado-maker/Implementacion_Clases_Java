@@ -1,67 +1,62 @@
 package com.example;
 
 public class Product {
+
     private String id;
     private String name;
     private double price;
     private int stock;
 
     public Product() {
-        id = null;
-        name = null;
-        price = 0.0;
-        stock = 0;
     }
 
     public Product(String id, String name, double price, int stock) {
         this.id = id;
+        setPrice(price);   
+        setStock(stock);  
         this.name = name;
-        this.price = price;
-        this.stock = stock;
-
     }
 
-    public String getIdAtributo() {
+    public String getId() {
         return id;
     }
 
-    public String getNombreAtributo() {
+    public String getName() {
         return name;
     }
 
-    public double getPriceAtributo() {
+    public double getPrice() {
         return price;
     }
 
-    public int getStockAtributo() {
+    public int getStock() {
         return stock;
     }
 
-    public void setIdAtributo(String id) {
+  
+    public void setId(String id) {
         this.id = id;
     }
 
-    public void setNombreAtributo(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public void setPriceAtributo(double price) {
-        if (price > 0) {
-            this.price = price;
-        }else{
-            System.out.println("el numero ingresado debe ser positivo");
+    public void setPrice(double price) {
+        if (price <= 0) {
+            throw new IllegalArgumentException("El precio debe ser positivo");
         }
-    
+        this.price = price;
     }
-    public void setStockAtributo(int stock) {
-        
-         if (stock > 0) {
-            this.stock = stock;
-        }else{
-            System.out.println("el numero ingresado debe ser positivo");
+
+    public void setStock(int stock) {
+        if (stock <= 0) {
+            throw new IllegalArgumentException("El stock debe ser positivo");
         }
+        this.stock = stock;
     }
+
      public String toString(){
-            return "producto " + "id: "+ id + " nombre: "+ name + " precio:"+ price + " inventrio:" + stock;
+            return "producto " + "id: "+ id + " nombre: "+ name + " precio:"+ price + " inventario:" + stock;
          }
 }

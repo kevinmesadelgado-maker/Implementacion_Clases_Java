@@ -20,8 +20,20 @@ Se aplican conceptos de Programación Orientada a Objetos (POO) como:
 
 El programa crea dos objetos de la clase Product y muestra su información en consola.
 
-# Cómo compilar y ejecutar
+# Compilación y ejecución
 
-1. Abrir la terminal en la carpeta del proyecto.
-2. Compilar el archivo:
+Requisitos:
+- Tener instalado JDK 17 o superior.
+- Tener configurada la variable de entorno JAVA_HOME.
+
+Pasos:
+
+1. Ubicarse en la carpeta raíz del proyecto.
+2. Compilar los archivos:
+
+   javac -d out src/com/example/*.java
+
+3. Ejecutar el programa:
+
+   java -cp out com.example.Main
 
