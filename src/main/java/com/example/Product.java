@@ -11,10 +11,10 @@ public class Product {
     }
 
     public Product(String id, String name, double price, int stock) {
-        this.id = id;
+        setId(id);
         setPrice(price);   
         setStock(stock);  
-        this.name = name;
+        setName(name);
     }
 
     public String getId() {

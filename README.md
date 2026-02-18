@@ -1,5 +1,3 @@
-# Implementacion_Clases_Java
-
 # Proyecto: Clase Product en Java
 
 # Descripción
