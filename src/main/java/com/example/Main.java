@@ -2,12 +2,10 @@ package com.example;
 
 public class Main {
     public static void main(String[] args) {
+Product p1 = new Product("1", "Pelota", 15.0, 10);
 
-        Product p1 = new Product("1","pelota",23.23,10);
-
-    
-        p1.setId("2");
-        p1.setPrice(20);
+p1.setId("3");
+p1.setPrice(20);
 
         System.out.println("Nombre p1: " + p1.getName());
         System.out.println("Precio p1: " + p1.getPrice());

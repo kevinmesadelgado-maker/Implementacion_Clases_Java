@@ -57,6 +57,10 @@ public class Product {
     }
 
      public String toString(){
-            return "producto " + "id: "+ id + " nombre: "+ name + " precio:"+ price + " inventario:" + stock;
+            return "Producto -> id: " + id +
+       ", nombre: " + name +
+       ", precio: " + price +
+       ", inventario: " + stock;
+
          }
 }
