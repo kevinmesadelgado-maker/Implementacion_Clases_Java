@@ -8,6 +8,11 @@ public class Product {
     private int stock;
 
     public Product() {
+    
+    this.id = null;
+    this.name = null;
+    this.price = 0.0;
+    this.stock = 0;
     }
 
     public Product(String id, String name, double price, int stock) {
@@ -43,14 +48,14 @@ public class Product {
     }
 
     public void setPrice(double price) {
-        if (price <= 0) {
+        if (price < 0) {
             throw new IllegalArgumentException("El precio debe ser positivo");
         }
         this.price = price;
     }
 
     public void setStock(int stock) {
-        if (stock <= 0) {
+        if (stock < 0) {
             throw new IllegalArgumentException("El stock debe ser positivo");
         }
         this.stock = stock;
